@@ -3,7 +3,8 @@ name: Telegram Reminder
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 11 3 * *"
+  - cron: "0 10 3 * *"   # 12:00 ora legale (estate)
+  - cron: "0 11 3 * *"   # 12:00 ora solare (inverno)
 
 jobs:
   run:
